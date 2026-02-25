@@ -106,6 +106,16 @@ final val org.w3c.dom.mediacapture/USER // org.w3c.dom.mediacapture/USER|@org.w3
     final inline fun (org.w3c.dom.mediacapture/VideoFacingModeEnum.Companion).<get-USER>(): org.w3c.dom.mediacapture/VideoFacingModeEnum // org.w3c.dom.mediacapture/USER.<get-USER>|<get-USER>@org.w3c.dom.mediacapture.VideoFacingModeEnum.Companion(){}[0]
 final val org.w3c.dom.mediacapture/VIDEOINPUT // org.w3c.dom.mediacapture/VIDEOINPUT|@org.w3c.dom.mediacapture.MediaDeviceKind.Companion{}VIDEOINPUT[0]
     final inline fun (org.w3c.dom.mediacapture/MediaDeviceKind.Companion).<get-VIDEOINPUT>(): org.w3c.dom.mediacapture/MediaDeviceKind // org.w3c.dom.mediacapture/VIDEOINPUT.<get-VIDEOINPUT>|<get-VIDEOINPUT>@org.w3c.dom.mediacapture.MediaDeviceKind.Companion(){}[0]
+final val org.w3c.dom.mediarecording/CONSTANT // org.w3c.dom.mediarecording/CONSTANT|@org.w3c.dom.mediarecording.BitrateMode.Companion{}CONSTANT[0]
+    final inline fun (org.w3c.dom.mediarecording/BitrateMode.Companion).<get-CONSTANT>(): org.w3c.dom.mediarecording/BitrateMode // org.w3c.dom.mediarecording/CONSTANT.<get-CONSTANT>|<get-CONSTANT>@org.w3c.dom.mediarecording.BitrateMode.Companion(){}[0]
+final val org.w3c.dom.mediarecording/INACTIVE // org.w3c.dom.mediarecording/INACTIVE|@org.w3c.dom.mediarecording.RecordingState.Companion{}INACTIVE[0]
+    final inline fun (org.w3c.dom.mediarecording/RecordingState.Companion).<get-INACTIVE>(): org.w3c.dom.mediarecording/RecordingState // org.w3c.dom.mediarecording/INACTIVE.<get-INACTIVE>|<get-INACTIVE>@org.w3c.dom.mediarecording.RecordingState.Companion(){}[0]
+final val org.w3c.dom.mediarecording/PAUSED // org.w3c.dom.mediarecording/PAUSED|@org.w3c.dom.mediarecording.RecordingState.Companion{}PAUSED[0]
+    final inline fun (org.w3c.dom.mediarecording/RecordingState.Companion).<get-PAUSED>(): org.w3c.dom.mediarecording/RecordingState // org.w3c.dom.mediarecording/PAUSED.<get-PAUSED>|<get-PAUSED>@org.w3c.dom.mediarecording.RecordingState.Companion(){}[0]
+final val org.w3c.dom.mediarecording/RECORDING // org.w3c.dom.mediarecording/RECORDING|@org.w3c.dom.mediarecording.RecordingState.Companion{}RECORDING[0]
+    final inline fun (org.w3c.dom.mediarecording/RecordingState.Companion).<get-RECORDING>(): org.w3c.dom.mediarecording/RecordingState // org.w3c.dom.mediarecording/RECORDING.<get-RECORDING>|<get-RECORDING>@org.w3c.dom.mediarecording.RecordingState.Companion(){}[0]
+final val org.w3c.dom.mediarecording/VARIABLE // org.w3c.dom.mediarecording/VARIABLE|@org.w3c.dom.mediarecording.BitrateMode.Companion{}VARIABLE[0]
+    final inline fun (org.w3c.dom.mediarecording/BitrateMode.Companion).<get-VARIABLE>(): org.w3c.dom.mediarecording/BitrateMode // org.w3c.dom.mediarecording/VARIABLE.<get-VARIABLE>|<get-VARIABLE>@org.w3c.dom.mediarecording.BitrateMode.Companion(){}[0]
 final val org.w3c.dom.mediasource/CLOSED // org.w3c.dom.mediasource/CLOSED|@org.w3c.dom.mediasource.ReadyState.Companion{}CLOSED[0]
     final inline fun (org.w3c.dom.mediasource/ReadyState.Companion).<get-CLOSED>(): org.w3c.dom.mediasource/ReadyState // org.w3c.dom.mediasource/CLOSED.<get-CLOSED>|<get-CLOSED>@org.w3c.dom.mediasource.ReadyState.Companion(){}[0]
 final val org.w3c.dom.mediasource/DECODE // org.w3c.dom.mediasource/DECODE|@org.w3c.dom.mediasource.EndOfStreamError.Companion{}DECODE[0]
@@ -1833,6 +1843,51 @@ abstract interface org.w3c.dom.mediacapture/VideoFacingModeEnum { // org.w3c.dom
 // Targets: [js]
 abstract interface org.w3c.dom.mediacapture/VideoResizeModeEnum { // org.w3c.dom.mediacapture/VideoResizeModeEnum|null[0]
     final object Companion // org.w3c.dom.mediacapture/VideoResizeModeEnum.Companion|null[0]
+}
+
+// Targets: [js]
+abstract interface org.w3c.dom.mediarecording/BitrateMode { // org.w3c.dom.mediarecording/BitrateMode|null[0]
+    final object Companion // org.w3c.dom.mediarecording/BitrateMode.Companion|null[0]
+}
+
+// Targets: [js]
+abstract interface org.w3c.dom.mediarecording/BlobEventInit : org.w3c.dom/EventInit { // org.w3c.dom.mediarecording/BlobEventInit|null[0]
+    abstract var data // org.w3c.dom.mediarecording/BlobEventInit.data|{}data[0]
+        abstract fun <get-data>(): org.w3c.files/Blob? // org.w3c.dom.mediarecording/BlobEventInit.data.<get-data>|<get-data>(){}[0]
+        abstract fun <set-data>(org.w3c.files/Blob?) // org.w3c.dom.mediarecording/BlobEventInit.data.<set-data>|<set-data>(org.w3c.files.Blob?){}[0]
+    open var timecode // org.w3c.dom.mediarecording/BlobEventInit.timecode|{}timecode[0]
+        open fun <get-timecode>(): kotlin/Double? // org.w3c.dom.mediarecording/BlobEventInit.timecode.<get-timecode>|<get-timecode>(){}[0]
+        open fun <set-timecode>(kotlin/Double?) // org.w3c.dom.mediarecording/BlobEventInit.timecode.<set-timecode>|<set-timecode>(kotlin.Double?){}[0]
+}
+
+// Targets: [js]
+abstract interface org.w3c.dom.mediarecording/MediaRecorderOptions { // org.w3c.dom.mediarecording/MediaRecorderOptions|null[0]
+    open var audioBitrateMode // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode|{}audioBitrateMode[0]
+        open fun <get-audioBitrateMode>(): org.w3c.dom.mediarecording/BitrateMode? // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode.<get-audioBitrateMode>|<get-audioBitrateMode>(){}[0]
+        open fun <set-audioBitrateMode>(org.w3c.dom.mediarecording/BitrateMode?) // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode.<set-audioBitrateMode>|<set-audioBitrateMode>(org.w3c.dom.mediarecording.BitrateMode?){}[0]
+    open var audioBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond|{}audioBitsPerSecond[0]
+        open fun <get-audioBitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond.<get-audioBitsPerSecond>|<get-audioBitsPerSecond>(){}[0]
+        open fun <set-audioBitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond.<set-audioBitsPerSecond>|<set-audioBitsPerSecond>(kotlin.Int?){}[0]
+    open var bitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond|{}bitsPerSecond[0]
+        open fun <get-bitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond.<get-bitsPerSecond>|<get-bitsPerSecond>(){}[0]
+        open fun <set-bitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond.<set-bitsPerSecond>|<set-bitsPerSecond>(kotlin.Int?){}[0]
+    open var mimeType // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType|{}mimeType[0]
+        open fun <get-mimeType>(): kotlin/String? // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType.<get-mimeType>|<get-mimeType>(){}[0]
+        open fun <set-mimeType>(kotlin/String?) // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType.<set-mimeType>|<set-mimeType>(kotlin.String?){}[0]
+    open var videoBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond|{}videoBitsPerSecond[0]
+        open fun <get-videoBitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond.<get-videoBitsPerSecond>|<get-videoBitsPerSecond>(){}[0]
+        open fun <set-videoBitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond.<set-videoBitsPerSecond>|<set-videoBitsPerSecond>(kotlin.Int?){}[0]
+    open var videoKeyFrameIntervalCount // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount|{}videoKeyFrameIntervalCount[0]
+        open fun <get-videoKeyFrameIntervalCount>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount.<get-videoKeyFrameIntervalCount>|<get-videoKeyFrameIntervalCount>(){}[0]
+        open fun <set-videoKeyFrameIntervalCount>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount.<set-videoKeyFrameIntervalCount>|<set-videoKeyFrameIntervalCount>(kotlin.Int?){}[0]
+    open var videoKeyFrameIntervalDuration // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration|{}videoKeyFrameIntervalDuration[0]
+        open fun <get-videoKeyFrameIntervalDuration>(): kotlin/Double? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration.<get-videoKeyFrameIntervalDuration>|<get-videoKeyFrameIntervalDuration>(){}[0]
+        open fun <set-videoKeyFrameIntervalDuration>(kotlin/Double?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration.<set-videoKeyFrameIntervalDuration>|<set-videoKeyFrameIntervalDuration>(kotlin.Double?){}[0]
+}
+
+// Targets: [js]
+abstract interface org.w3c.dom.mediarecording/RecordingState { // org.w3c.dom.mediarecording/RecordingState|null[0]
+    final object Companion // org.w3c.dom.mediarecording/RecordingState.Companion|null[0]
 }
 
 // Targets: [js]
@@ -15799,6 +15854,74 @@ open class org.w3c.dom.mediacapture/OverconstrainedErrorEvent : org.w3c.dom.even
 }
 
 // Targets: [js]
+open class org.w3c.dom.mediarecording/BlobEvent : org.w3c.dom.events/Event { // org.w3c.dom.mediarecording/BlobEvent|null[0]
+    constructor <init>() // org.w3c.dom.mediarecording/BlobEvent.<init>|<init>(){}[0]
+
+    open val data // org.w3c.dom.mediarecording/BlobEvent.data|{}data[0]
+        open fun <get-data>(): org.w3c.files/Blob // org.w3c.dom.mediarecording/BlobEvent.data.<get-data>|<get-data>(){}[0]
+    open val timecode // org.w3c.dom.mediarecording/BlobEvent.timecode|{}timecode[0]
+        open fun <get-timecode>(): kotlin/Double // org.w3c.dom.mediarecording/BlobEvent.timecode.<get-timecode>|<get-timecode>(){}[0]
+
+    final object Companion { // org.w3c.dom.mediarecording/BlobEvent.Companion|null[0]
+        final val AT_TARGET // org.w3c.dom.mediarecording/BlobEvent.Companion.AT_TARGET|{}AT_TARGET[0]
+            final fun <get-AT_TARGET>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.AT_TARGET.<get-AT_TARGET>|<get-AT_TARGET>(){}[0]
+        final val BUBBLING_PHASE // org.w3c.dom.mediarecording/BlobEvent.Companion.BUBBLING_PHASE|{}BUBBLING_PHASE[0]
+            final fun <get-BUBBLING_PHASE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.BUBBLING_PHASE.<get-BUBBLING_PHASE>|<get-BUBBLING_PHASE>(){}[0]
+        final val CAPTURING_PHASE // org.w3c.dom.mediarecording/BlobEvent.Companion.CAPTURING_PHASE|{}CAPTURING_PHASE[0]
+            final fun <get-CAPTURING_PHASE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.CAPTURING_PHASE.<get-CAPTURING_PHASE>|<get-CAPTURING_PHASE>(){}[0]
+        final val NONE // org.w3c.dom.mediarecording/BlobEvent.Companion.NONE|{}NONE[0]
+            final fun <get-NONE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.NONE.<get-NONE>|<get-NONE>(){}[0]
+    }
+}
+
+// Targets: [js]
+open class org.w3c.dom.mediarecording/MediaRecorder : org.w3c.dom.events/EventTarget { // org.w3c.dom.mediarecording/MediaRecorder|null[0]
+    constructor <init>(org.w3c.dom.mediacapture/MediaStream, org.w3c.dom.mediarecording/MediaRecorderOptions = ...) // org.w3c.dom.mediarecording/MediaRecorder.<init>|<init>(org.w3c.dom.mediacapture.MediaStream;org.w3c.dom.mediarecording.MediaRecorderOptions){}[0]
+
+    open val audioBitrateMode // org.w3c.dom.mediarecording/MediaRecorder.audioBitrateMode|{}audioBitrateMode[0]
+        open fun <get-audioBitrateMode>(): org.w3c.dom.mediarecording/BitrateMode // org.w3c.dom.mediarecording/MediaRecorder.audioBitrateMode.<get-audioBitrateMode>|<get-audioBitrateMode>(){}[0]
+    open val audioBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorder.audioBitsPerSecond|{}audioBitsPerSecond[0]
+        open fun <get-audioBitsPerSecond>(): kotlin/Int // org.w3c.dom.mediarecording/MediaRecorder.audioBitsPerSecond.<get-audioBitsPerSecond>|<get-audioBitsPerSecond>(){}[0]
+    open val mimeType // org.w3c.dom.mediarecording/MediaRecorder.mimeType|{}mimeType[0]
+        open fun <get-mimeType>(): kotlin/String // org.w3c.dom.mediarecording/MediaRecorder.mimeType.<get-mimeType>|<get-mimeType>(){}[0]
+    open val state // org.w3c.dom.mediarecording/MediaRecorder.state|{}state[0]
+        open fun <get-state>(): org.w3c.dom.mediarecording/RecordingState // org.w3c.dom.mediarecording/MediaRecorder.state.<get-state>|<get-state>(){}[0]
+    open val stream // org.w3c.dom.mediarecording/MediaRecorder.stream|{}stream[0]
+        open fun <get-stream>(): org.w3c.dom.mediacapture/MediaStream // org.w3c.dom.mediarecording/MediaRecorder.stream.<get-stream>|<get-stream>(){}[0]
+    open val videoBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorder.videoBitsPerSecond|{}videoBitsPerSecond[0]
+        open fun <get-videoBitsPerSecond>(): kotlin/Int // org.w3c.dom.mediarecording/MediaRecorder.videoBitsPerSecond.<get-videoBitsPerSecond>|<get-videoBitsPerSecond>(){}[0]
+
+    final var ondataavailable // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable|{}ondataavailable[0]
+        final fun <get-ondataavailable>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable.<get-ondataavailable>|<get-ondataavailable>(){}[0]
+        final fun <set-ondataavailable>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable.<set-ondataavailable>|<set-ondataavailable>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+    final var onerror // org.w3c.dom.mediarecording/MediaRecorder.onerror|{}onerror[0]
+        final fun <get-onerror>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.onerror.<get-onerror>|<get-onerror>(){}[0]
+        final fun <set-onerror>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.onerror.<set-onerror>|<set-onerror>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+    final var onpause // org.w3c.dom.mediarecording/MediaRecorder.onpause|{}onpause[0]
+        final fun <get-onpause>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.onpause.<get-onpause>|<get-onpause>(){}[0]
+        final fun <set-onpause>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.onpause.<set-onpause>|<set-onpause>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+    final var onresume // org.w3c.dom.mediarecording/MediaRecorder.onresume|{}onresume[0]
+        final fun <get-onresume>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.onresume.<get-onresume>|<get-onresume>(){}[0]
+        final fun <set-onresume>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.onresume.<set-onresume>|<set-onresume>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+    final var onstart // org.w3c.dom.mediarecording/MediaRecorder.onstart|{}onstart[0]
+        final fun <get-onstart>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.onstart.<get-onstart>|<get-onstart>(){}[0]
+        final fun <set-onstart>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.onstart.<set-onstart>|<set-onstart>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+    final var onstop // org.w3c.dom.mediarecording/MediaRecorder.onstop|{}onstop[0]
+        final fun <get-onstop>(): kotlin/Function1<org.w3c.dom.events/Event, dynamic>? // org.w3c.dom.mediarecording/MediaRecorder.onstop.<get-onstop>|<get-onstop>(){}[0]
+        final fun <set-onstop>(kotlin/Function1<org.w3c.dom.events/Event, dynamic>?) // org.w3c.dom.mediarecording/MediaRecorder.onstop.<set-onstop>|<set-onstop>(kotlin.Function1<org.w3c.dom.events.Event,<dynamic>>?){}[0]
+
+    final fun pause(): dynamic // org.w3c.dom.mediarecording/MediaRecorder.pause|pause(){}[0]
+    final fun requestData(): dynamic // org.w3c.dom.mediarecording/MediaRecorder.requestData|requestData(){}[0]
+    final fun resume(): dynamic // org.w3c.dom.mediarecording/MediaRecorder.resume|resume(){}[0]
+    final fun start(kotlin/Int = ...): dynamic // org.w3c.dom.mediarecording/MediaRecorder.start|start(kotlin.Int){}[0]
+    final fun stop(): dynamic // org.w3c.dom.mediarecording/MediaRecorder.stop|stop(){}[0]
+
+    final object Companion { // org.w3c.dom.mediarecording/MediaRecorder.Companion|null[0]
+        final fun isTypeSupported(kotlin/String): kotlin/Boolean // org.w3c.dom.mediarecording/MediaRecorder.Companion.isTypeSupported|isTypeSupported(kotlin.String){}[0]
+    }
+}
+
+// Targets: [js]
 open class org.w3c.dom.mediasource/MediaSource : org.w3c.dom.events/EventTarget, org.w3c.dom/MediaProvider { // org.w3c.dom.mediasource/MediaSource|null[0]
     constructor <init>() // org.w3c.dom.mediasource/MediaSource.<init>|<init>(){}[0]
 
@@ -19353,6 +19476,12 @@ final inline fun org.w3c.dom.mediacapture/Settings(): org.w3c.dom.mediacapture/S
 final inline fun org.w3c.dom.mediacapture/ULongRange(kotlin/Int? = ..., kotlin/Int? = ...): org.w3c.dom.mediacapture/ULongRange // org.w3c.dom.mediacapture/ULongRange|ULongRange(kotlin.Int?;kotlin.Int?){}[0]
 
 // Targets: [js]
+final inline fun org.w3c.dom.mediarecording/BlobEventInit(org.w3c.files/Blob?, kotlin/Double? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ...): org.w3c.dom.mediarecording/BlobEventInit // org.w3c.dom.mediarecording/BlobEventInit|BlobEventInit(org.w3c.files.Blob?;kotlin.Double?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?){}[0]
+
+// Targets: [js]
+final inline fun org.w3c.dom.mediarecording/MediaRecorderOptions(kotlin/String? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., org.w3c.dom.mediarecording/BitrateMode? = ..., kotlin/Double? = ..., kotlin/Int? = ...): org.w3c.dom.mediarecording/MediaRecorderOptions // org.w3c.dom.mediarecording/MediaRecorderOptions|MediaRecorderOptions(kotlin.String?;kotlin.Int?;kotlin.Int?;kotlin.Int?;org.w3c.dom.mediarecording.BitrateMode?;kotlin.Double?;kotlin.Int?){}[0]
+
+// Targets: [js]
 final inline fun org.w3c.dom.pointerevents/PointerEventInit(kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin/Float? = ..., kotlin/Float? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Short? = ..., kotlin/Short? = ..., org.w3c.dom.events/EventTarget? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., org.w3c.dom/Window? = ..., kotlin/Int? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ...): org.w3c.dom.pointerevents/PointerEventInit // org.w3c.dom.pointerevents/PointerEventInit|PointerEventInit(kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.Float?;kotlin.Float?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.String?;kotlin.Boolean?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.Short?;kotlin.Short?;org.w3c.dom.events.EventTarget?;kotlin.String?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;org.w3c.dom.Window?;kotlin.Int?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?){}[0]
 
 // Targets: [js]
@@ -20932,6 +21061,51 @@ abstract interface org.w3c.dom.mediacapture/VideoFacingModeEnum : kotlin.js/JsAn
 // Targets: [wasmJs]
 abstract interface org.w3c.dom.mediacapture/VideoResizeModeEnum : kotlin.js/JsAny { // org.w3c.dom.mediacapture/VideoResizeModeEnum|null[0]
     final object Companion // org.w3c.dom.mediacapture/VideoResizeModeEnum.Companion|null[0]
+}
+
+// Targets: [wasmJs]
+abstract interface org.w3c.dom.mediarecording/BitrateMode : kotlin.js/JsAny { // org.w3c.dom.mediarecording/BitrateMode|null[0]
+    final object Companion // org.w3c.dom.mediarecording/BitrateMode.Companion|null[0]
+}
+
+// Targets: [wasmJs]
+abstract interface org.w3c.dom.mediarecording/BlobEventInit : kotlin.js/JsAny, org.w3c.dom/EventInit { // org.w3c.dom.mediarecording/BlobEventInit|null[0]
+    abstract var data // org.w3c.dom.mediarecording/BlobEventInit.data|{}data[0]
+        abstract fun <get-data>(): org.w3c.files/Blob? // org.w3c.dom.mediarecording/BlobEventInit.data.<get-data>|<get-data>(){}[0]
+        abstract fun <set-data>(org.w3c.files/Blob?) // org.w3c.dom.mediarecording/BlobEventInit.data.<set-data>|<set-data>(org.w3c.files.Blob?){}[0]
+    open var timecode // org.w3c.dom.mediarecording/BlobEventInit.timecode|{}timecode[0]
+        open fun <get-timecode>(): kotlin/Double? // org.w3c.dom.mediarecording/BlobEventInit.timecode.<get-timecode>|<get-timecode>(){}[0]
+        open fun <set-timecode>(kotlin/Double?) // org.w3c.dom.mediarecording/BlobEventInit.timecode.<set-timecode>|<set-timecode>(kotlin.Double?){}[0]
+}
+
+// Targets: [wasmJs]
+abstract interface org.w3c.dom.mediarecording/MediaRecorderOptions : kotlin.js/JsAny { // org.w3c.dom.mediarecording/MediaRecorderOptions|null[0]
+    open var audioBitrateMode // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode|{}audioBitrateMode[0]
+        open fun <get-audioBitrateMode>(): org.w3c.dom.mediarecording/BitrateMode? // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode.<get-audioBitrateMode>|<get-audioBitrateMode>(){}[0]
+        open fun <set-audioBitrateMode>(org.w3c.dom.mediarecording/BitrateMode?) // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitrateMode.<set-audioBitrateMode>|<set-audioBitrateMode>(org.w3c.dom.mediarecording.BitrateMode?){}[0]
+    open var audioBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond|{}audioBitsPerSecond[0]
+        open fun <get-audioBitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond.<get-audioBitsPerSecond>|<get-audioBitsPerSecond>(){}[0]
+        open fun <set-audioBitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.audioBitsPerSecond.<set-audioBitsPerSecond>|<set-audioBitsPerSecond>(kotlin.Int?){}[0]
+    open var bitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond|{}bitsPerSecond[0]
+        open fun <get-bitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond.<get-bitsPerSecond>|<get-bitsPerSecond>(){}[0]
+        open fun <set-bitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.bitsPerSecond.<set-bitsPerSecond>|<set-bitsPerSecond>(kotlin.Int?){}[0]
+    open var mimeType // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType|{}mimeType[0]
+        open fun <get-mimeType>(): kotlin/String? // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType.<get-mimeType>|<get-mimeType>(){}[0]
+        open fun <set-mimeType>(kotlin/String?) // org.w3c.dom.mediarecording/MediaRecorderOptions.mimeType.<set-mimeType>|<set-mimeType>(kotlin.String?){}[0]
+    open var videoBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond|{}videoBitsPerSecond[0]
+        open fun <get-videoBitsPerSecond>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond.<get-videoBitsPerSecond>|<get-videoBitsPerSecond>(){}[0]
+        open fun <set-videoBitsPerSecond>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoBitsPerSecond.<set-videoBitsPerSecond>|<set-videoBitsPerSecond>(kotlin.Int?){}[0]
+    open var videoKeyFrameIntervalCount // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount|{}videoKeyFrameIntervalCount[0]
+        open fun <get-videoKeyFrameIntervalCount>(): kotlin/Int? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount.<get-videoKeyFrameIntervalCount>|<get-videoKeyFrameIntervalCount>(){}[0]
+        open fun <set-videoKeyFrameIntervalCount>(kotlin/Int?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalCount.<set-videoKeyFrameIntervalCount>|<set-videoKeyFrameIntervalCount>(kotlin.Int?){}[0]
+    open var videoKeyFrameIntervalDuration // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration|{}videoKeyFrameIntervalDuration[0]
+        open fun <get-videoKeyFrameIntervalDuration>(): kotlin/Double? // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration.<get-videoKeyFrameIntervalDuration>|<get-videoKeyFrameIntervalDuration>(){}[0]
+        open fun <set-videoKeyFrameIntervalDuration>(kotlin/Double?) // org.w3c.dom.mediarecording/MediaRecorderOptions.videoKeyFrameIntervalDuration.<set-videoKeyFrameIntervalDuration>|<set-videoKeyFrameIntervalDuration>(kotlin.Double?){}[0]
+}
+
+// Targets: [wasmJs]
+abstract interface org.w3c.dom.mediarecording/RecordingState : kotlin.js/JsAny { // org.w3c.dom.mediarecording/RecordingState|null[0]
+    final object Companion // org.w3c.dom.mediarecording/RecordingState.Companion|null[0]
 }
 
 // Targets: [wasmJs]
@@ -34911,6 +35085,74 @@ open class org.w3c.dom.mediacapture/OverconstrainedErrorEvent : kotlin.js/JsAny,
 }
 
 // Targets: [wasmJs]
+open class org.w3c.dom.mediarecording/BlobEvent : kotlin.js/JsAny, org.w3c.dom.events/Event { // org.w3c.dom.mediarecording/BlobEvent|null[0]
+    constructor <init>() // org.w3c.dom.mediarecording/BlobEvent.<init>|<init>(){}[0]
+
+    open val data // org.w3c.dom.mediarecording/BlobEvent.data|{}data[0]
+        open fun <get-data>(): org.w3c.files/Blob // org.w3c.dom.mediarecording/BlobEvent.data.<get-data>|<get-data>(){}[0]
+    open val timecode // org.w3c.dom.mediarecording/BlobEvent.timecode|{}timecode[0]
+        open fun <get-timecode>(): kotlin/Double // org.w3c.dom.mediarecording/BlobEvent.timecode.<get-timecode>|<get-timecode>(){}[0]
+
+    final object Companion { // org.w3c.dom.mediarecording/BlobEvent.Companion|null[0]
+        final val AT_TARGET // org.w3c.dom.mediarecording/BlobEvent.Companion.AT_TARGET|{}AT_TARGET[0]
+            final fun <get-AT_TARGET>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.AT_TARGET.<get-AT_TARGET>|<get-AT_TARGET>(){}[0]
+        final val BUBBLING_PHASE // org.w3c.dom.mediarecording/BlobEvent.Companion.BUBBLING_PHASE|{}BUBBLING_PHASE[0]
+            final fun <get-BUBBLING_PHASE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.BUBBLING_PHASE.<get-BUBBLING_PHASE>|<get-BUBBLING_PHASE>(){}[0]
+        final val CAPTURING_PHASE // org.w3c.dom.mediarecording/BlobEvent.Companion.CAPTURING_PHASE|{}CAPTURING_PHASE[0]
+            final fun <get-CAPTURING_PHASE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.CAPTURING_PHASE.<get-CAPTURING_PHASE>|<get-CAPTURING_PHASE>(){}[0]
+        final val NONE // org.w3c.dom.mediarecording/BlobEvent.Companion.NONE|{}NONE[0]
+            final fun <get-NONE>(): kotlin/Short // org.w3c.dom.mediarecording/BlobEvent.Companion.NONE.<get-NONE>|<get-NONE>(){}[0]
+    }
+}
+
+// Targets: [wasmJs]
+open class org.w3c.dom.mediarecording/MediaRecorder : kotlin.js/JsAny, org.w3c.dom.events/EventTarget { // org.w3c.dom.mediarecording/MediaRecorder|null[0]
+    constructor <init>(org.w3c.dom.mediacapture/MediaStream, org.w3c.dom.mediarecording/MediaRecorderOptions = ...) // org.w3c.dom.mediarecording/MediaRecorder.<init>|<init>(org.w3c.dom.mediacapture.MediaStream;org.w3c.dom.mediarecording.MediaRecorderOptions){}[0]
+
+    open val audioBitrateMode // org.w3c.dom.mediarecording/MediaRecorder.audioBitrateMode|{}audioBitrateMode[0]
+        open fun <get-audioBitrateMode>(): org.w3c.dom.mediarecording/BitrateMode // org.w3c.dom.mediarecording/MediaRecorder.audioBitrateMode.<get-audioBitrateMode>|<get-audioBitrateMode>(){}[0]
+    open val audioBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorder.audioBitsPerSecond|{}audioBitsPerSecond[0]
+        open fun <get-audioBitsPerSecond>(): kotlin/Int // org.w3c.dom.mediarecording/MediaRecorder.audioBitsPerSecond.<get-audioBitsPerSecond>|<get-audioBitsPerSecond>(){}[0]
+    open val mimeType // org.w3c.dom.mediarecording/MediaRecorder.mimeType|{}mimeType[0]
+        open fun <get-mimeType>(): kotlin/String // org.w3c.dom.mediarecording/MediaRecorder.mimeType.<get-mimeType>|<get-mimeType>(){}[0]
+    open val state // org.w3c.dom.mediarecording/MediaRecorder.state|{}state[0]
+        open fun <get-state>(): org.w3c.dom.mediarecording/RecordingState // org.w3c.dom.mediarecording/MediaRecorder.state.<get-state>|<get-state>(){}[0]
+    open val stream // org.w3c.dom.mediarecording/MediaRecorder.stream|{}stream[0]
+        open fun <get-stream>(): org.w3c.dom.mediacapture/MediaStream // org.w3c.dom.mediarecording/MediaRecorder.stream.<get-stream>|<get-stream>(){}[0]
+    open val videoBitsPerSecond // org.w3c.dom.mediarecording/MediaRecorder.videoBitsPerSecond|{}videoBitsPerSecond[0]
+        open fun <get-videoBitsPerSecond>(): kotlin/Int // org.w3c.dom.mediarecording/MediaRecorder.videoBitsPerSecond.<get-videoBitsPerSecond>|<get-videoBitsPerSecond>(){}[0]
+
+    final var ondataavailable // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable|{}ondataavailable[0]
+        final fun <get-ondataavailable>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable.<get-ondataavailable>|<get-ondataavailable>(){}[0]
+        final fun <set-ondataavailable>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.ondataavailable.<set-ondataavailable>|<set-ondataavailable>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+    final var onerror // org.w3c.dom.mediarecording/MediaRecorder.onerror|{}onerror[0]
+        final fun <get-onerror>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.onerror.<get-onerror>|<get-onerror>(){}[0]
+        final fun <set-onerror>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.onerror.<set-onerror>|<set-onerror>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+    final var onpause // org.w3c.dom.mediarecording/MediaRecorder.onpause|{}onpause[0]
+        final fun <get-onpause>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.onpause.<get-onpause>|<get-onpause>(){}[0]
+        final fun <set-onpause>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.onpause.<set-onpause>|<set-onpause>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+    final var onresume // org.w3c.dom.mediarecording/MediaRecorder.onresume|{}onresume[0]
+        final fun <get-onresume>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.onresume.<get-onresume>|<get-onresume>(){}[0]
+        final fun <set-onresume>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.onresume.<set-onresume>|<set-onresume>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+    final var onstart // org.w3c.dom.mediarecording/MediaRecorder.onstart|{}onstart[0]
+        final fun <get-onstart>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.onstart.<get-onstart>|<get-onstart>(){}[0]
+        final fun <set-onstart>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.onstart.<set-onstart>|<set-onstart>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+    final var onstop // org.w3c.dom.mediarecording/MediaRecorder.onstop|{}onstop[0]
+        final fun <get-onstop>(): kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>? // org.w3c.dom.mediarecording/MediaRecorder.onstop.<get-onstop>|<get-onstop>(){}[0]
+        final fun <set-onstop>(kotlin/Function1<org.w3c.dom.events/Event, kotlin/Unit>?) // org.w3c.dom.mediarecording/MediaRecorder.onstop.<set-onstop>|<set-onstop>(kotlin.Function1<org.w3c.dom.events.Event,kotlin.Unit>?){}[0]
+
+    final fun pause(): kotlin.js/JsAny? // org.w3c.dom.mediarecording/MediaRecorder.pause|pause(){}[0]
+    final fun requestData(): kotlin.js/JsAny? // org.w3c.dom.mediarecording/MediaRecorder.requestData|requestData(){}[0]
+    final fun resume(): kotlin.js/JsAny? // org.w3c.dom.mediarecording/MediaRecorder.resume|resume(){}[0]
+    final fun start(kotlin/Int = ...): kotlin.js/JsAny? // org.w3c.dom.mediarecording/MediaRecorder.start|start(kotlin.Int){}[0]
+    final fun stop(): kotlin.js/JsAny? // org.w3c.dom.mediarecording/MediaRecorder.stop|stop(){}[0]
+
+    final object Companion { // org.w3c.dom.mediarecording/MediaRecorder.Companion|null[0]
+        final fun isTypeSupported(kotlin/String): kotlin/Boolean // org.w3c.dom.mediarecording/MediaRecorder.Companion.isTypeSupported|isTypeSupported(kotlin.String){}[0]
+    }
+}
+
+// Targets: [wasmJs]
 open class org.w3c.dom.mediasource/MediaSource : kotlin.js/JsAny, org.w3c.dom.events/EventTarget, org.w3c.dom/MediaProvider { // org.w3c.dom.mediasource/MediaSource|null[0]
     constructor <init>() // org.w3c.dom.mediasource/MediaSource.<init>|<init>(){}[0]
 
@@ -38522,6 +38764,12 @@ final fun org.w3c.dom.mediacapture/Settings(): org.w3c.dom.mediacapture/Settings
 
 // Targets: [wasmJs]
 final fun org.w3c.dom.mediacapture/ULongRange(kotlin/Int? = ..., kotlin/Int? = ...): org.w3c.dom.mediacapture/ULongRange // org.w3c.dom.mediacapture/ULongRange|ULongRange(kotlin.Int?;kotlin.Int?){}[0]
+
+// Targets: [wasmJs]
+final fun org.w3c.dom.mediarecording/BlobEventInit(org.w3c.files/Blob?, kotlin/Double? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ...): org.w3c.dom.mediarecording/BlobEventInit // org.w3c.dom.mediarecording/BlobEventInit|BlobEventInit(org.w3c.files.Blob?;kotlin.Double?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?){}[0]
+
+// Targets: [wasmJs]
+final fun org.w3c.dom.mediarecording/MediaRecorderOptions(kotlin/String? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., org.w3c.dom.mediarecording/BitrateMode? = ..., kotlin/Double? = ..., kotlin/Int? = ...): org.w3c.dom.mediarecording/MediaRecorderOptions // org.w3c.dom.mediarecording/MediaRecorderOptions|MediaRecorderOptions(kotlin.String?;kotlin.Int?;kotlin.Int?;kotlin.Int?;org.w3c.dom.mediarecording.BitrateMode?;kotlin.Double?;kotlin.Int?){}[0]
 
 // Targets: [wasmJs]
 final fun org.w3c.dom.pointerevents/PointerEventInit(kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin/Float? = ..., kotlin/Float? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Short? = ..., kotlin/Short? = ..., org.w3c.dom.events/EventTarget? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., org.w3c.dom/Window? = ..., kotlin/Int? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ...): org.w3c.dom.pointerevents/PointerEventInit // org.w3c.dom.pointerevents/PointerEventInit|PointerEventInit(kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.Float?;kotlin.Float?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.String?;kotlin.Boolean?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.Short?;kotlin.Short?;org.w3c.dom.events.EventTarget?;kotlin.String?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?;org.w3c.dom.Window?;kotlin.Int?;kotlin.Boolean?;kotlin.Boolean?;kotlin.Boolean?){}[0]
